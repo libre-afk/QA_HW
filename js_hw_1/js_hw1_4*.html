@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Task 4
+    </title>
+    <script>
+        const checkAge = function (ages) {
+            let message = '';
+            for (index in ages) {
+                if (isNaN(parseInt(ages[index]))) {
+                    alert(`${ages[index]} is not a number`);
+                    console.log(`${ages[index]} is not a number`);
+                    continue;
+                }
+                let age_1 = ages[index];
+                let age_2 = 18;
+                let age_3 = 60;
+                
+                if (age_1 < 0) {
+                    message += "\n Technical maintenance<br>";
+                    document.getElementById("message").innerHTML = message;
+                    console.log("\n Technical maintenance");
+					 continue;
+                }
+                if (age_1 < age_2) {
+                    message += `\n You don't have access cause your age is ${age_1}. It's less than necessary <br>`;
+                    document.getElementById("message").innerHTML = message;
+                    console.log(`\n You don't have access cause your age is ${age_1}. It's less than necessary`);
+                    continue;
+                }
+                if (age_1 >= age_2 && age_1 < age_3) {
+                    message += "\n Welcome!<br>";
+                    document.getElementById("message").innerHTML = message;
+                    console.log("\n Welcome!");
+                    continue;
+                }
+                if (age_1 > age_3) {
+                    message += "\n Keep calm and watch channel Culture!<br>";
+                    document.getElementById("message").innerHTML = message;
+                    console.log("\n Keep calm and watch channel Culture!");
+                    continue;
+                }
+
+
+            }
+        }
+    </script>
+</head>
+
+<body style="text-align: center;">
+<h2>
+    Task 4
+</h2>
+
+<button onclick="checkAge(prompt('Enter numbers separated by commas', '').split(','))">
+    Click me
+</button>
+<p id="message"></p>
+
+</body>
+
+</html>  
