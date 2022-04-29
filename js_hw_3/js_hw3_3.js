@@ -75,13 +75,17 @@ const enterprises = [
  // и возвращать название предприятия, к которому относится).
  
  console.log(`===============2===============`)
-
- console.log(2)
  const getEnterpriseName = function (id) {
-     return enterprises.filter(e => e.id === id).map(e => e.name).toString()
+     let name = "";
+     enterprises.forEach(e => {
+         e.departments.forEach(d => {
+             if (d.id == id)
+                 name = e.name;
+         })
+     });
+     return name;
  }
- 
- console.log(getEnterpriseName(9));
+ console.log(getEnterpriseName(2));
 
 
 //3. Написать функцию, которая будет добавлять предприятие. 
