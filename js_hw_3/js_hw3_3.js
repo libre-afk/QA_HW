@@ -93,14 +93,12 @@ const enterprises = [
 
 console.log(`===============3===============`)
 let addEnterprise = function (name) {
-    let id = 0;
-    do {
-        id++;
-    } while (enterprises.map(e => e.id).includes(id))
-    enterprises.push({id: id, name: name, departments: []})
+    let ids = enterprises.flatMap(e => e.id)
+    .push(...enterprises.flatMap(e => e.departments.map(d => d.id)));
 
+    enterprises.push({id: Math.max(ids) + 1, name: name, departments: []})
 }
-addEnterprise("OOO");
+addEnterprise("ололо");
 enterprises.forEach(e => console.log(e));
 
 // 4. Написать функцию, которая будет добавлять отдел в предприятие. 
@@ -108,14 +106,11 @@ enterprises.forEach(e => console.log(e));
 
 console.log(`===============4===============`)
 let addDepartment = function (id, department) {
-    let idNew = 0;
-    do {
-        idNew++;
-        console.log(enterprises.flatMap(e => e.departments.map(d => d.id)))
-    } while (enterprises.flatMap(e => e.departments.map(d => d.id)).includes(idNew))
+    let ids = enterprises.flatMap(e => e.id)
+    .push(...enterprises.flatMap(e => e.departments.map(d => d.id)))
     console.log(enterprises.forEach(e => {
         if (e.id === id)
-            e.departments.push({id: idNew, name: department, employees_count: 0})
+            e.departments.push({id: Math.max(ids) + 1, name: department, employees_count: 0})
     }));
 }
 
@@ -130,7 +125,7 @@ let editEnterprise = function (id, name) {
     enterprises.forEach(e => e.id === id ? e.name = name : "")
 }
 
-editEnterprise(5, "OOO!!!!");
+editEnterprise(5, "OOO моя оборона");
 enterprises.forEach(e => console.log(e));
 
 // 6. Написать функцию для редактирования названия отдела. 
@@ -157,7 +152,7 @@ let deleteEnterprise = function (id) {
     enterprises.splice(index, 1);
 }
 
-deleteEnterprise(2);
+deleteEnterprise(11);
 enterprises.forEach(e => console.log(e));
 
 
@@ -167,8 +162,8 @@ enterprises.forEach(e => console.log(e));
 console.log(`===============8===============`)
 let deleteDepartment = function (id) {
     enterprises.forEach(e => {
-        let index = e.departments.findIndex(e => e.id === id && e.employees_count === 0);
-        if (index === 0) {
+        let index = e.departments.findIndex(d => d.id === id && d.employees_count === 0);
+        if (index !== -1) {
             e.departments.splice(index, 1);
         }
     })
@@ -182,7 +177,7 @@ enterprises.forEach(e => console.log(e));
 // В качестве аргумента принимает два значения: id отдела, из которого будут переноситься сотрудники и id отдела, 
 // в который будут переноситься сотрудники).
 
-console.log(`===============9===============`)
+console.log(`\n ===============9=============== \n `)
 let moveEmployees = function (idFirstDepartment, idSecondDepartment) {
     let num = enterprises.flatMap(e => e.departments).filter(d => d.id === idSecondDepartment).map(d => d.employees_count).pop();
     enterprises.forEach(e => {
