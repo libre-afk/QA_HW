@@ -1,8 +1,8 @@
 {
 	"info": {
-		"_postman_id": "9a735410-43c6-42de-82af-9391e0aa789e",
-		"name": "Postman_hw_1",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"_postman_id": "7c47c519-8730-4b7b-8f38-583b43332330",
+		"name": "Postman_hw_1 Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
@@ -22,15 +22,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://162.55.220.72:5005/get_method?name={{name}}&age={{age}}",
-					"protocol": "http",
+					"raw": "{{url}}/get_method?name={{name}}&age={{age}}",
 					"host": [
-						"162",
-						"55",
-						"220",
-						"72"
+						"{{url}}"
 					],
-					"port": "5005",
 					"path": [
 						"get_method"
 					],
@@ -73,7 +68,15 @@
 						}
 					]
 				},
-				"url": "http://162.55.220.72:5005/user_info_3"
+				"url": {
+					"raw": "{{url}}/user_info_3",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user_info_3"
+					]
+				}
 			},
 			"response": []
 		},
@@ -83,15 +86,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://162.55.220.72:5005/object_info_1?name={{name}}&age={{age}}&weight={{weight}}",
-					"protocol": "http",
+					"raw": "{{url}}/object_info_1?name={{name}}&age={{age}}&weight={{weight}}",
 					"host": [
-						"162",
-						"55",
-						"220",
-						"72"
+						"{{url}}"
 					],
-					"port": "5005",
 					"path": [
 						"object_info_1"
 					],
@@ -119,15 +117,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://162.55.220.72:5005/object_info_2?name={{name}}&age={{age}}&salary={{salary}}",
-					"protocol": "http",
+					"raw": "{{url}}/object_info_2?name={{name}}&age={{age}}&salary={{salary}}",
 					"host": [
-						"162",
-						"55",
-						"220",
-						"72"
+						"{{url}}"
 					],
-					"port": "5005",
 					"path": [
 						"object_info_2"
 					],
@@ -155,15 +148,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://162.55.220.72:5005/object_info_3?name={{name}}&age={{age}}&salary={{salary}}",
-					"protocol": "http",
+					"raw": "{{url}}/object_info_3?name={{name}}&age={{age}}&salary={{salary}}",
 					"host": [
-						"162",
-						"55",
-						"220",
-						"72"
+						"{{url}}"
 					],
-					"port": "5005",
 					"path": [
 						"object_info_3"
 					],
@@ -191,15 +179,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://162.55.220.72:5005/object_info_4?name={{name}}&age={{age}}&salary={{salary}}",
-					"protocol": "http",
+					"raw": "{{url}}/object_info_4?name={{name}}&age={{age}}&salary={{salary}}",
 					"host": [
-						"162",
-						"55",
-						"220",
-						"72"
+						"{{url}}"
 					],
-					"port": "5005",
 					"path": [
 						"object_info_4"
 					],
@@ -246,7 +229,15 @@
 						}
 					]
 				},
-				"url": "http://162.55.220.72:5005/user_info_2"
+				"url": {
+					"raw": "{{url}}/user_info_2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user_info_2"
+					]
+				}
 			},
 			"response": []
 		}
