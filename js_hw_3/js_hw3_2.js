@@ -359,6 +359,9 @@ const users = [
 ];
 
 
+let uniqueUser = Array.from(new Set(users.map(item => JSON.stringify(item)))).map(item => JSON.parse(item));
+console.log(uniqueUser)
+
 const uniqueUsers = function(){
 let uniqueUsers = new Set();
 users.forEach(user=>uniqueUsers.add(JSON.stringify(user)))
