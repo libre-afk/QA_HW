@@ -49,7 +49,7 @@ Attachment*
 
 7. В ветке CheckLists набросать структуру чек листа.  
 ==========================================================================  
-	`cat > checklist.txt  (создаем и редактируем файл)`  
+	`git checkout CheckLists && cat > checklist.txt`  
 	*What we will do  
 	What we need not to forget  
 	What we will check*
