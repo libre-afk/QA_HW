@@ -12,7 +12,7 @@
 `git branch Postman && git branch Jmeter`  
 `git branch CheckLists && git branch SQL`  
 `git branch Bug_Reports && git branch Charles`  
-`git branch Mobile testing`
+`git branch Mobile_testing`
 2. Запушить все ветки на внешний репозиторий  
 ==========================================================================  
 	`git push -u --all`
