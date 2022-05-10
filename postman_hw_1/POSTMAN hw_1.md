@@ -5,12 +5,12 @@
 - IP: 162.55.220.72
 - Port: 5005
 
-##### **REQUEST №1** 
-Method: GET
-EndPoint: /get_method
-request url params: 
- name: Ana
- age: 31
+##### **REQUEST №1**   
+Method: GET  
+EndPoint: /get_method  
+request url params:   
+ name: Ana  
+ age: 31  
 ##### **RESPONSE №1**
 ```sh
 [
@@ -19,13 +19,13 @@ request url params:
 ]
 ```
 
-##### **REQUEST №2** 
-Method: POST
-EndPoint: /user_info_3
-request form data: 
- name: Ana
- age: 31
- salary: 1000
+##### **REQUEST №2**   
+Method: POST  
+EndPoint: /user_info_3  
+request form data:   
+ name: Ana  
+ age: 31  
+ salary: 1000  
  ##### **RESPONSE №2**
  ```sh
 {
@@ -48,13 +48,13 @@ request form data:
 }
 ```
 
-##### **REQUEST №3** 
-Method: GET
-EndPoint: /object_info_1
-request url params: 
- name: Ana
- age: 31
- weight: 75
+##### **REQUEST №3**   
+Method: GET  
+EndPoint: /object_info_1  
+request url params:   
+ name: Ana  
+ age: 31  
+ weight: 75  
 ##### **RESPONSE №3**
  ```sh
 {
@@ -65,13 +65,13 @@ request url params:
 }
 ```
 
-##### **REQUEST №4**
-Method: GET
-EndPoint: /object_info_2
-request url params: 
- name: Ana
- age: 31
- salary: 1000
+##### **REQUEST №4**  
+Method: GET  
+EndPoint: /object_info_2  
+request url params:   
+ name: Ana  
+ age: 31  
+ salary: 1000  
 ##### **RESPONSE №4**
  ```sh
 {
@@ -91,13 +91,13 @@ request url params:
     "start_qa_salary": 1000
 }
 ```
-##### **REQUEST №5**
-Method: GET
-EndPoint: /object_info_3
-request url params: 
- name: Ana
- age: 31
- salary: 1000
+##### **REQUEST №5**  
+Method: GET  
+EndPoint: /object_info_3  
+request url params:   
+ name: Ana  
+ age: 31  
+ salary: 1000  
 ##### **RESPONSE №5**
  ```sh
 {
@@ -130,13 +130,13 @@ request url params:
 }
 ```
 
-##### **REQUEST №6**
-Method: GET
-EndPoint: /object_info_4
-request url params: 
- name: Ana
- age: 31
- salary: 1000
+##### **REQUEST №6**  
+Method: GET  
+EndPoint: /object_info_4  
+request url params:   
+ name: Ana  
+ age: 31  
+ salary: 1000  
 ##### **RESPONSE №6**
  ```sh
 {
@@ -150,13 +150,13 @@ request url params:
 }
 ```
 
-##### **REQUEST №7**
-Method: POST
-EndPoint: /user_info_2
-request form data: 
- name: Ana
- age: 31
- salary: 1000
+##### **REQUEST №7**  
+Method: POST  
+EndPoint: /user_info_2  
+request form data:   
+ name: Ana  
+ age: 31  
+ salary: 1000  
  
 ##### **RESPONSE №7**
  ```sh
