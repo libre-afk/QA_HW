@@ -81,7 +81,7 @@ const company = [
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-const format = (children, i = 2, pre = ' ', pre1 = ' ') => children.map(({name, users_count, children}) => {
+const format = (children, i = 2, pre = ' ') => children.map(({name, users_count, children}) => {
     //recursive call
     if (Array.isArray(children)) return `${pre}${name} (${users_count})\n${format(children, i, `${pre || '|'}${'-'.repeat(i)}`)}`
     return `${pre}${name} (${users_count})`
