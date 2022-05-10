@@ -1,2 +1,2 @@
 # QA_HW
-Homework done during Vadim Ksendzov's QA course
+*Homework done during Vadim Ksendzov's QA course
