@@ -69,8 +69,8 @@ request url params:
 Method: GET
 EndPoint: /object_info_2
 request url params: 
- name: sergio
- age: 28
+ name: Ana
+ age: 31
  salary: 1000
 ##### **RESPONSE №4**
  ```sh
