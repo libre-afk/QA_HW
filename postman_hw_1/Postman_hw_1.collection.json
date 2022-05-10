@@ -1,91 +1,44 @@
 {
 	"info": {
-		"_postman_id": "c1ecddf8-d5e4-43f6-8cb9-766a162ec6fc",
-		"name": "gr_29",
+		"_postman_id": "9a735410-43c6-42de-82af-9391e0aa789e",
+		"name": "Postman_hw_1",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "first_req",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200);",
-							"});",
-							"",
-							"let item_1 = 'Alex'",
-							"pm.test('item_1 Test', function () {",
-							"    pm.expect(item_1).to.equal('Alex')",
-							"});",
-							"",
-							"let person = {",
-							"    \"age\": \"20\",",
-							"    \"family\": {",
-							"        \"children\": [",
-							"            [",
-							"                \"Alex\",",
-							"                24",
-							"            ],",
-							"            [",
-							"                \"Kate\",",
-							"                12",
-							"            ]",
-							"        ],",
-							"        \"u_salary_1_5_year\": 2000",
-							"    },",
-							"    \"name\": \"Alex\",",
-							"    \"salary\": 500",
-							"}",
-							"",
-							"",
-							"",
-							"pm.test('item_2 Person', function () {",
-							"    pm.expect(+person.age).to.equal(20)",
-							"});",
-							"",
-							"pm.test('item_1' , function() {",
-							"    pm.expect(person.family.children[0][1]).to.deep.equal(24)",
-							"});",
-							"",
-							"pm.test('item_3 Prop_Name', function () {",
-							"    pm.expect(person).to.have.property('name')",
-							"});",
-							"",
-							"pm.test('item_4 Person', function () {",
-							"    pm.expect(+person.age).to.equal(20)",
-							"});",
-							"",
-							"pm.test('item_5 Person', function () {",
-							"    pm.expect(person).to.deep.include({\"salary\": 500})",
-							"});",
-							"",
-							"pm.test('item_6 Person', function () {",
-							"    pm.expect(person.family.children[1]).to.deep.include('Kate')",
-							"});",
-							"",
-							"pm.test('item_7 Person', function () {",
-							"    pm.expect(person.family.children[1][1]).to.be.a('Number')",
-							"});",
-							"",
-							"pm.test('item_8 Person', function () {",
-							"    pm.expect(person.name).to.be.a('String')",
-							"});",
-							"",
-							"pm.test('item_6 Person', function () {",
-							"    pm.expect(person.family.children[1]).to.be.an('Array').that.include(12)",
-							"});",
-							"",
-							"//const jsonData = pm.response.json();",
-							"",
-							""
-						],
-						"type": "text/javascript"
-					}
+			"name": "EP_1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://162.55.220.72:5005/get_method?name=Ana&age=31",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"get_method"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Ana"
+						},
+						{
+							"key": "age",
+							"value": "31"
+						}
+					]
 				}
-			],
+			},
+			"response": []
+		},
+		{
+			"name": "EP_2",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -93,28 +46,196 @@
 					"mode": "formdata",
 					"formdata": [
 						{
+							"key": "name",
+							"value": "Ana",
+							"type": "text"
+						},
+						{
 							"key": "age",
-							"value": "20",
+							"value": "31",
 							"type": "text"
 						},
 						{
 							"key": "salary",
-							"value": "500",
-							"type": "text"
-						},
-						{
-							"key": "name",
-							"value": "Alex",
-							"type": "text"
-						},
-						{
-							"key": "auth_token",
-							"value": "/s34lfgbj/Vadim/jjd909/12242kjkWpqc322823r23r3r457271evny",
+							"value": "1000",
 							"type": "text"
 						}
 					]
 				},
-				"url": "http://162.55.220.72:5005/get_test_user"
+				"url": "http://162.55.220.72:5005/user_info_3"
+			},
+			"response": []
+		},
+		{
+			"name": "EP_3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://162.55.220.72:5005/object_info_1?name=Ana&age=31&weight=53",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"object_info_1"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Ana"
+						},
+						{
+							"key": "age",
+							"value": "31"
+						},
+						{
+							"key": "weight",
+							"value": "53"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EP_4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://162.55.220.72:5005/object_info_2?name=Ana&age=31&salsry=1000",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"object_info_2"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Ana"
+						},
+						{
+							"key": "age",
+							"value": "31"
+						},
+						{
+							"key": "salsry",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EP_5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://162.55.220.72:5005/object_info_3?name=Ana&age=31&salary=1000",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"object_info_3"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Ana"
+						},
+						{
+							"key": "age",
+							"value": "31"
+						},
+						{
+							"key": "salary",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EP_6",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://162.55.220.72:5005/object_info_4?name=Ana&age=31&salary=1000",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"object_info_4"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Ana"
+						},
+						{
+							"key": "age",
+							"value": "31"
+						},
+						{
+							"key": "salary",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EP_7",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Ana",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "31",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "1000",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://162.55.220.72:5005/user_info_2"
 			},
 			"response": []
 		}
